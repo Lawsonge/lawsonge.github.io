@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>任务五：零基础HTML及CSS编码（二）</title>
+    <style type="text/css">
+        html,body{
+            font-family: "Microsoft Yahei";
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            background-color:#E3E3E3;
+        }
+        }html,body{
+             width: 100%;
+             height: 100%;
+             margin: 0;
+             padding: 0;
+         }
+        h3{
+            color:#939393;
+            font-size: 16px;
+        }
+        /*导航*/
+        header{
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            min-height: 70px;
+            background-color: #333;
+            color: #fff;
+        }
+        header .logo{
+            float:left;
+            max-height: 48px;
+            margin:15px 40px;
+        }
+        header nav{
+            float:right;
+            margin-top:12px;
+            margin-right:20px;
+        }
+        header nav ul li{
+            display: inline;
+            margin-left:20px;
+        }
+        header a{
+            color: #fff;
+            text-decoration:none;
+        }
+        header a:hover{
+            color: #00ff00;
+            text-decoration:none;
+        }
+        /*文章*/
+        article{
+            margin:25px;
+            padding:20px;
+            background-color: #fff;
+            box-shadow: 3px 3px 3px #999;
+        }
+        article p{
+            line-height: 25px;
+            text-indent: 2em;
+        }
+        .author-time{
+            color: #999999;
+            font-size: 14px;
+        }
+        article img{
+            max-width: 350px;
+        }
+        article ul li{
+            list-style: none;
+        }
+        article dl dd{
+            margin-bottom: 1em;
+            padding:5px;
+            text-align: center;
+            width:120px;
+            border: solid 1px #E3E3E3;
+            display: inline-block;
+        }
+        article dl dd p{
+            margin:0 auto;
+            text-align: center;
+        }
+        article dl dd img{
+            margin-top:5px;
+            max-width: 105px;
+            height: auto;
+        }
+        /*表格*/
+        article table{
+            width:100%;
+            text-align: left;
+            border-collapse:collapse;
+            border: solid #999;
+            border-width:1px;
+        }
+        article table thead td{
+            background-color: #333;
+            color: #fff;
+            padding-left:5px;
+            border: solid 1px #fff;
+        }
+        article table tfoot{
+            background-color: #dddddd;
+            color: #000;
+        }
+        article table tr td{
+            border: solid 1px #dddddd;
+            padding-left:5px;
+        }
+        /*侧边*/
+        aside{
+            margin:0 25px;
+            padding:20px;
+            background-color: #fff;
+            box-shadow: 3px 3px 3px #999;
+        }
+        aside h2{
+            font-size: 16px;
+            padding:10px;
+            border-left: solid 3px #999999;
+        }
+        aside form{
+            width:100%;
+        }
+        aside form div {
+            line-height: 30px;
+        }
+        aside form span{
+            padding-top: 12px;
+            font-size: 12px;
+            color: #898989;
+        }
+        .tishi1{
+            display: inline-block;
+            width:40%;
+            margin-right: 1em;
+            margin-top: 0.7em;
+            text-align: right;
+        }
+        .tishi2{
+            width:53%;
+            display: inline-block;
+            vertical-align: text-top;
+        }
+        aside form textarea{
+            vertical-align: text-top;
+            width: 90%;
+            height: 7em;
+        }
+        .form-submit {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1em;
+            background-color: #35d;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+        }
+        .form-submit:focus,.form-submit:hover{
+            background-color: 337ab7;
+        }
+        /*底部*/
+        footer{
+            width:100%;
+            background:#000;
+            color: #fff;
+            text-align: center;
+            min-height: 85px;
+        }
+        footer p{
+            padding:30px;
+        }
+        .left{
+            margin-right: 390px;
+            min-width: 350px;
+        }
+        .right{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="#"><img class="logo" src="../images/baidu_logo.png" alt="logo" title="网站logo"></a>
+    <nav>
+        <ul>
+            <li><a href="#1" target="_blank">导航链接1</a></li>
+            <li><a href="#2" target="_blank">导航链接2</a></li>
+            <li><a href="#3" target="_blank">导航链接3</a></li>
+            <li><a href="#4" target="_blank">导航链接4</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="main_warpper">
+    <div class="right">
+        <aside>
+            <h2>这里以后是一个侧边栏，这是侧边栏的标题</h2>
+            <!--<h3>侧边栏窗口标题</h3>-->
+            <form action="#" method="post">
+                <div>
+                    <label for="email" class="tishi1">请输入邮箱地址：</label>
+                    <div class="tishi2">
+                        <input type="text" id="email" placeholder="请输入邮箱地址" ><br><span>邮箱地址请按要求格式输入</span>
+                    </div>
+                </div>
+                <div>
+                    <label for="password1" class="tishi1">请输入密码:</label>
+                    <div class="tishi2">
+                        <input type="password" id="password1" name="password1" minlength="6" maxlength="16" placeholder="******" />
+                    </div>
+                </div>
+                <div>
+                    <label for="password2" class="tishi1">请重复输入密码:</label>
+                    <div class="tishi2">
+                        <input type="password" id="password2" name="password2" minlength="6" maxlength="16" placeholder="******" /><br><span>密码为6-16位英文数字</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="tishi1">性别：</div>
+                    <div class="tishi2">
+                        <lable><input type="radio" name="sex" value="male" checked >男</lable>
+                        <lable><input type="radio" name="sex" value="female">女</lable>
+                    </div>
+                </div>
+                <div>
+                    <label class="tishi1">城市：</label>
+                    <div class="tishi2">
+                        <select name="city">
+                            <option value="beijing">北京</option>
+                            <option value="shanghai">上海</option>
+                            <option value="guagnzhou" selected>广州</option>
+                            <option value="shenzhen">深圳</option>
+                            <option value="wuhan">武汉</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <lable class="tishi1">爱好：</lable>
+                    <div class="tishi2">
+                        <lable><input type="checkbox" name="intrest" value="sport">运动</lable>
+                        <lable><input type="checkbox" name="intrest" value="air">艺术</lable>
+                        <lable><input type="checkbox" name="intrest" value="science">科学</lable>
+                    </div>
+                </div>
+                <div>
+                    <lable for="person" class="tishi1">个人描述：</lable>
+                    <div class="tishi2">
+                        <textarea id="person" name="introduce" placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
+                    </div>
+                </div>
+                <input type="submit" value="确认提交" class="form-submit">
+            </form>
+        </aside>
+    </div>
+<div class="left">
+<article>
+    <h2>文章一级标题</h2>
+    <h3>文章二级标题</h3>
+    <div class="author-time">
+        <span>文章作者</span>
+        <time datetime="2016-3-21">文章发表时间</time>
+    </div>
+    <p>
+        这是一个很长很长的段落这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落
+        <br>这是一个很长很长的段落这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落
+        这是一个很长很长的段落这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com" target="_blank">这是一个超链接</a>，<b>这有一个粗体字</b>
+    </p>
+    <img src="../images/dog.jpg" title="dog" alt="sufing dog">
+    <p>
+        这是一个很长很长的段落这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落
+        <br>这是一个很长很长的段落这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落
+        这是一个很长很长的段落这是一个很长很长的段落，这是一个很长很长的段落，，<a href="http://ife.baidu.com" target="_blank">这是一个超链接</a>，<b>这有一个粗体字</b>
+    </p>
+</article>
+<article>
+    <h2>第二篇文章一级标题</h2>
+    <h3>第二篇文章二级标题</h3>
+    <div class="author-time">
+        <span>文章作者</span>
+        <span>文章发布时间</span>
+    </div>
+    <p>
+        这是一个很长很长的段落这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落
+        <br>这是一个很长很长的段落这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落
+        这是一个很长很长的段落这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com" target="_blank">这是一个超链接</a>，<b>这有一个粗体字</b>
+    </p>
+    <img src="../images/dog.jpg" title="dog" alt="sufing dog">
+    <ul>
+        <li>列表项目一</li>
+        <li>列表项目二</li>
+        <li>列表项目三</li>
+    </ul>
+</article>
+<article>
+    <h2>图片</h2>
+    <dl>
+        <dd>
+            <div>冲浪的小狗</div>
+            <img src="../images/dog.jpg" title="dog" alt="sufing dog">
+        </dd>
+        <dd>
+            <div>冲浪的小狗</div>
+            <img src="../images/dog.jpg" title="dog" alt="sufing dog">
+        </dd>
+        <dd>
+            <div>冲浪的小狗</div>
+            <img src="../images/dog.jpg" title="dog" alt="sufing dog">
+        </dd>
+        <dd>
+            <div>冲浪的小狗</div>
+            <img src="../images/dog.jpg" title="dog" alt="sufing dog">
+        </dd>
+        <dd>
+            <div>冲浪的小狗</div>
+            <img src="../images/dog.jpg" title="dog" alt="sufing dog">
+        </dd>
+        <dd>
+            <div>冲浪的小狗</div>
+            <img src="../images/dog.jpg" title="dog" alt="sufing dog">
+        </dd>
+        <dd>
+            <div>冲浪的小狗</div>
+            <img src="../images/dog.jpg" title="dog" alt="sufing dog">
+        </dd>
+        <dd>
+            <div>冲浪的小狗</div>
+            <img src="../images/dog.jpg" title="dog" alt="sufing dog">
+        </dd>
+        <dd>
+            <div>冲浪的小狗</div>
+            <img src="../images/dog.jpg" title="dog" alt="sufing dog">
+        </dd>
+    </dl>
+</article>
+<article>
+    <h2>最后一篇文章一级标题</h2>
+    <h3>最后一篇文章二级标题</h3>
+    <div class="author-time">
+        <span>文章作者</span>
+        <span>文章发布时间</span>
+    </div>
+    <ol>
+        <li>排名1</li>
+        <li>排名2</li>
+        <li>排名3</li>
+    </ol>
+    <div>下面是一个表格，给表格加了一个border="1"好让你看出是一个表格，你们不用写html时候不需要加</div>
+    <table>
+        <thead>
+        <tr>
+            <td>表头</td>
+            <td>表头</td>
+            <td>表头</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>表内容单元格</td>
+            <td>表内容单元格</td>
+            <td><a href="#">操作</a></td>
+        </tr>
+        <tr>
+            <td>表内容单元格</td>
+            <td>表内容单元格</td>
+            <td><a href="#">操作</a></td>
+        </tr>
+        <tr>
+            <td>表内容单元格</td>
+            <td>表内容单元格</td>
+            <td><a href="#">操作</a></td>
+        </tr>
+        <tr>
+            <td>表内容单元格</td>
+            <td>表内容单元格</td>
+            <td><a href="#">操作</a></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>总计</td>
+            <td colspan="2">1000</td>
+        </tr>
+        </tfoot>
+    </table>
+</article>
+</div>
+
+</div>
+<footer>
+    <p>版权所有&copy;</p>
+</footer>
+</body>
+</html>
